@@ -10,41 +10,43 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
-/**
- *
- * @author Personal
- */
+
 @WebServlet(name = "ValidarUsuario", urlPatterns = {"/ValidarUsuario"})
 public class ValidarUsuario extends HttpServlet {
-    
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            
-            String user = request.getParameter("usuario");
-            String pass = request.getParameter("clave");
-            
-            boolean esValido = false;
-            String mensaje = "";
-            
-            if("admin".equals(user)&& "1234".equals(pass)){
-                esValido = true;
-                mensaje = "Registro exitoso";
-            } else {
-                mensaje = "Registro invalido";
-            }
-           
-            request.setAttribute("esValido", esValido);
-            request.setAttribute("mensaje", mensaje);
-            request.setAttribute("usuario", user);
-            
-            request.getRequestDispatcher("resultado.jsp").forward(request, response);
+        // Obtener parámetros
+        String user = request.getParameter("usuario");
+        String pass = request.getParameter("clave");
         
+        // Validar credenciales
+        boolean esValido = false;
+        String mensaje = "";
+        
+        if("admin".equals(user) && "1234".equals(pass)) {
+            esValido = true;
+            mensaje = "Registro Exitoso";
+        } else {
+            mensaje = "Registro Inválido";
         }
+        
+        // Agregar atributos al request
+        request.setAttribute("esValido", esValido);
+        request.setAttribute("mensaje", mensaje);
+        request.setAttribute("usuario", user);
+        
+        // Redirigir a JSP
+        request.getRequestDispatcher("resultado.jsp").forward(request, response);
     }
 }
