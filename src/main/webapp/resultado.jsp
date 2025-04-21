@@ -22,7 +22,7 @@
         <p>Has iniciado sesión correctamente.</p>
     <% } else { %>
         <p>Usuario o contraseña incorrectos.</p>
-        <a href="login.html">Volver a intentar</a>
+        <a href="Login.jsp">Volver a intentar</a>
     <% } %>
 </body>
 </html>
