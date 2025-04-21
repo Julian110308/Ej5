@@ -11,6 +11,84 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Resultado de Validación</title>
 </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            padding: 
+            background-image: linear-gradient(120deg, #e0f7fa 0%, #f3e5f5 100%);
+            min-height: 100vh;
+        }
+        
+        .resultado-container {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .resultado-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 1rem;
+        }
+        
+        .resultado-header h1 {
+            color: #5c6bc0;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resultado-content {
+            color: #424242;
+            line-height: 1.6;
+        }
+        
+        .usuario {
+            font-weight: bold;
+            color: #3f51b5;
+        }
+        
+        .mensaje-exito {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            color: #2e7d32;
+        }
+        
+        .btn-volver {
+            display: inline-block;
+            background-color: #5c6bc0;
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-top: 2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-volver:hover {
+            background-color: #3f51b5;
+        }
+        
+        .icon-success {
+            font-size: 3rem;
+            color: #4caf50;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
 <body>
     <h1>${mensaje}</h1>
     
