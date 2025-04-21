@@ -21,7 +21,7 @@
         
         body {
             background-color: #f5f7fa;
-            padding: 
+            padding: 20px;
             background-image: linear-gradient(120deg, #e0f7fa 0%, #f3e5f5 100%);
             min-height: 100vh;
         }
