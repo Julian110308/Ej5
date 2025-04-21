@@ -91,17 +91,23 @@
         }
     </style>
 <body>
+      <div id="mensaje-principal">
     <h1>${mensaje}</h1>
-    
-    <% 
-        Boolean valido = (Boolean)request.getAttribute("esValido");
-        if(valido != null && valido) { 
-    %>
-        <p>Bienvenido, ${usuario}!</p>
-        <p>Has iniciado sesión correctamente.</p>
-    <% } else { %>
-        <p>Usuario o contraseña incorrectos.</p>
-        <a href="Login.jsp">Volver a intentar</a>
-    <% } %>
+  </div>
+
+  <%
+    Boolean valido = (Boolean)request.getAttribute("esValido");
+    if(valido !=null && valido) {
+  %>
+    <div id="mensaje-bienvenida">
+      <p>Bienvenido, ${usuario}!</p>
+      <p>Has iniciado sesión correctamente.</p>
+    </div>
+  <% } else { %>
+    <div id="mensaje-error">
+      <p>Usuario o contraseña incorrectos.</p>
+      <a href="Login.jsp">Volver a intentar</a>
+    </div>
+  <% } %>
 </body>
 </html>
