@@ -5,6 +5,7 @@
 package controladores;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import java.io.PrintWriter;
  *
  * @author Personal
  */
+@WebServlet(name = "ValidarUsuario", urlPatterns = {"/ValidarUsuario"})
 public class ValidarUsuario extends HttpServlet {
     
     @Override
