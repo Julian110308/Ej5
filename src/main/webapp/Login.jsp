@@ -13,24 +13,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div>Ingreso Usuario</div>
-    <div>
-    <form name="Ingreso" action="ValidarUsuario" method="post">
-      <div>
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" value="">
-      </div>
-      <br><br>
-      <div>
-        <label for="clave">Clave:</label>
-        <input type="password" id="clave" name="clave" value="">
-      </div>
-      <br><br>
-      <div>
-        <input type="submit" value="Ingresar">
-      </div>
-    </form>
-  </div>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                <i>👤</i>
+            </div>
+            <h1>¡Bienvenido!</h1>
+            <p>Ingresa tus credenciales para acceder</p>
+        </div>
+        
+        <form class="login-form" action="ValidarUsuario" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Ingresa tu usuario" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="clave">Contraseña</label>
+                <input type="password" class="form-control" id="clave" name="clave" placeholder="Ingresa tu contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-submit">Iniciar Sesión</button>
+        </form>
+        
+        <div class="additional-options">
+            <p>¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
+            <p style="margin-top: 0.5rem;">¿No tienes cuenta? <a href="#">Registrarse</a></p>
+        </div>
+    </div>
 </body>
 </html>
 
