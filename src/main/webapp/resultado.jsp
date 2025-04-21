@@ -11,6 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Resultado de Validación</title>
 </head>
+
     <style>
         * {
             margin: 0;
