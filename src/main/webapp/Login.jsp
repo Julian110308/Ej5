@@ -14,15 +14,23 @@
 </head>
 <body>
     <div>Ingreso Usuario</div>
+    <div>
     <form name="Ingreso" action="ValidarUsuario" method="post">
-        <br><br>
-        Usuario: <input type="text" name="usuario" value="" />
-        <br><br>
-        Clave: <input type="password" name="clave" value="" />
-        <br><br>
-        <input type="submit" value="Ingresar" />
-        <br><br>
+      <div>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="">
+      </div>
+      <br><br>
+      <div>
+        <label for="clave">Clave:</label>
+        <input type="password" id="clave" name="clave" value="">
+      </div>
+      <br><br>
+      <div>
+        <input type="submit" value="Ingresar">
+      </div>
     </form>
+  </div>
 </body>
 </html>
 
