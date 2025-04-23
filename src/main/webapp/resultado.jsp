@@ -69,7 +69,7 @@
         
         .btn-volver {
             display: inline-block;
-            background-color: #5c6bc0;
+            background-color: #ff0033;
             color: white;
             text-decoration: none;
             padding: 0.8rem 1.5rem;
