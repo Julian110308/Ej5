@@ -119,17 +119,15 @@
   }
     </style>
 <body>
-    <div class="menu">
+    <body>
+  <div class="menu">
     <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Perfil</a></li>
-      <li><a href="#">Configuración</a></li>
+      <li><a href="Inicio.jsp">Inicio</a></li>
+      <li><a href="Perfil.jsp">Perfil</a></li>
+      <li><a href="Configuracion.jsp">Configuración</a></li>
     </ul>
   </div>
   <div class="resultado-container">
-    <div class="resultado-header">
-      <h1>${mensaje}</h1>
-    </div>
     <div class="resultado-content">
       <%
         Boolean valido = (Boolean) request.getAttribute("esValido");
