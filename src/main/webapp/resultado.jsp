@@ -89,25 +89,60 @@
             margin-bottom: 1rem;
             display: block;
         }
+        
+        .menu {
+    background-color: #f8f9fa; /* Un gris claro de fondo */
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6; /* Línea divisoria inferior */
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para que los elementos estén en línea horizontal */
+    justify-content: center; /* Centrar los elementos del menú */
+  }
+
+  .menu li {
+    margin: 0 15px; /* Espacio entre los elementos del menú */
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: #495057; /* Color de texto */
+    font-weight: bold;
+  }
+
+  .menu li a:hover {
+    color: #007bff; /* Cambiar color al pasar el ratón */
+  }
     </style>
 <body>
-    <div class="resultado-container">
-        <div class="resultado-header">
-            <h1>${mensaje}</h1>
-        </div>
-        <div class="resultado-content">
-            <%
-                Boolean valido = (Boolean) request.getAttribute("esValido");
-                if(valido != null && valido) {
-            %>
-                <i class="icon-success">✓</i>
-                <p>¡Bienvenido, <span class="usuario">${usuario}</span>!</p>
-                <p class="mensaje-exito">Has iniciado sesión correctamente.</p>
-            <% } else { %>
-                <p>Usuario o contraseña incorrectos.</p>
-                <a href="Login.jsp" class="btn-volver">Volver a intentar</a>
-            <% } %>
-        </div>
+    <div class="menu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#">Configuración</a></li>
+    </ul>
+  </div>
+  <div class="resultado-container">
+    <div class="resultado-header">
+      <h1>${mensaje}</h1>
     </div>
+    <div class="resultado-content">
+      <%
+        Boolean valido = (Boolean) request.getAttribute("esValido");
+        if(valido != null && valido) {
+      %>
+        <i class="icon-success">√</i>
+        <p>Bienvenido, <span class="usuario">${usuario}</span>!</p>
+        <p class="mensaje-exito">Has iniciado sesión correctamente.</p>
+      <% } else { %>
+        <p>Usuario o contraseña incorrectos.</p>
+        <a href="Login.jsp" class="btn-volver">Volver a intentar</a>
+      <% } %>
+    </div>
+  </div>
 </body>
 </html>
