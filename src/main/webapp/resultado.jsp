@@ -120,19 +120,20 @@
     </style>
 <body>
     <body>
-  <div class="menu">
-    <ul>
-      <li><a href="Inicio.jsp">Inicio</a></li>
-      <li><a href="Perfil.jsp">Perfil</a></li>
-      <li><a href="Configuracion.jsp">Configuración</a></li>
-    </ul>
-  </div>
+  
   <div class="resultado-container">
     <div class="resultado-content">
       <%
         Boolean valido = (Boolean) request.getAttribute("esValido");
         if(valido != null && valido) {
       %>
+        <div class="menu">
+            <ul>
+              <li><a href="Inicio.jsp">Inicio</a></li>
+              <li><a href="Perfil.jsp">Perfil</a></li>
+              <li><a href="Configuracion.jsp">Configuración</a></li>
+            </ul>
+          </div>
         <i class="icon-success">√</i>
         <p>Bienvenido, <span class="usuario">${usuario}</span>!</p>
         <p class="mensaje-exito">Has iniciado sesión correctamente.</p>
